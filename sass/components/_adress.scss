@@ -1,0 +1,32 @@
+.conteiner__flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.adress {
+    margin-right: 70px;
+}
+
+.adress__item {
+    :not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.adress__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-style: normal;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+
+.adress__white {
+    color: var(--hero-color);
+}

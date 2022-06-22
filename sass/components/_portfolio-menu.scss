@@ -1,0 +1,32 @@
+.portfolio-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-menu__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+
+.portfolio-menu__button {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 6px 22px;
+    min-width: 75px;
+    font-weight: 500;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    background: #F5F4FA;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        color: var(--hero-color);
+            background-color: var(--accent-color);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

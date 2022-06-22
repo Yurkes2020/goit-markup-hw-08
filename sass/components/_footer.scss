@@ -1,0 +1,9 @@
+.footer {
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &--black {
+        background: var(--background-black)
+    }
+}
