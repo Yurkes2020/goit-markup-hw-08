@@ -1,23 +1,28 @@
 .logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    font-family: Raleway, sans-serif;
-    color: var(--accent-color);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: Raleway, sans-serif;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
 
-    &--black {
-        color: var(--primiry-text-color);
-    }
-    &--white {
-        color: var(--hero-color);
-    }
+  @media screen and (min-width: 1200px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  &--black {
+    color: var(--primiry-text-color);
+  }
+  &--white {
+    color: var(--hero-color);
+  }
 }
 
 .footer__logo {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 0;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 0;
 }
