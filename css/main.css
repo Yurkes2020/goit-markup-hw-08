@@ -70,8 +70,19 @@ ul {
 .section--none {
   display: none;
 }
+@media screen and (min-width: 480px) {
+  .section {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .section {
+    width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -506,16 +517,18 @@ ul {
 }
 
 .conteiner__flex {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .conteiner__flex {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
 }
 
 .adress {
-  margin-right: 70px;
-}
-
-.adress__item :not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: 60px;
 }
 
 .adress__link {
@@ -533,10 +546,37 @@ ul {
   color: var(--hero-color);
 }
 
+@media screen and (min-width: 768px) {
+  .block-social {
+    display: inline-block;
+    margin-left: 165px;
+  }
+
+  .adress {
+    display: inline-block;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .adress {
+    margin-right: 70px;
+  }
+
+  .block-social {
+    margin: 0;
+  }
+}
 .subscription {
-  display: flex;
-  align-items: flex-end;
-  margin-left: 93px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .subscription {
+    margin-left: 93px;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+  }
 }
 
 .subscription__block {
@@ -545,17 +585,16 @@ ul {
 }
 
 .subscription__label {
-  width: 350px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-color);
-  margin-bottom: 20px;
 }
 
 .subscription__input {
+  width: 450px;
   height: 50px;
   padding-left: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -563,6 +602,12 @@ ul {
   background-color: transparent;
   color: var(--hero-color);
   font-size: 16px;
+  margin: 20px auto;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__input {
+    margin-bottom: 0;
+  }
 }
 
 .email-btn {
@@ -570,7 +615,11 @@ ul {
   justify-content: center;
   align-items: center;
   height: 50px;
-  margin-left: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .email-btn {
+    margin-left: 12px;
+  }
 }
 
 .email-btn__icon {
