@@ -18,13 +18,23 @@
         <div class="conteiner conteiner-header">
             <nav class="nav">
                 <a class="logo" href="./index.html">Web<span class="logo--black">Studio</span></a>
-                <!-- <ul class="nav__list">
+                <button class="menu-button is-open" type="button"
+                aria-expanded="false" 
+                aria-controls="menu-conteiner"
+                data-menu-button>
+                    <svg width="24" height="16" aria-label="Переключатель меню">
+                        <use class="icon-menu" href="./image/icons.svg#icon-menu"></use>
+                        <use class="icon-close" href="./image/icons.svg#icon-close-menu"></use>
+                    </svg>
+                </button>
+                <div></div>
+                <ul class="nav__list" data-menu id="menu-conteiner">
                     <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a></li>
                     <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
                     <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-                </ul> -->
+                </ul>
             </nav> 
-            <!-- <ul class="contact">
+            <ul class="contact" data-menu id="menu-conteiner">
                 <li class="contact__item">
                     <a class="contact__link" href="mailto:info@devstudio.com">
                         <svg class="contact__icon" width="16" height="12">
@@ -41,11 +51,11 @@
                         +38 096 111 11 11
                     </a>
                 </li>
-            </ul> -->
+            </ul>
         </div>
    </header>    
    <main>
-        <!-- Заказ -->
+        <!-- заказ -->
         <section class="section section-hero">
                 <h1 class="section-hero__title">Эффективные решения<br> для вашего бизнеса</h1>   
                 <button data-modal-open class="btn" type="button">Заказать услугу</button>
@@ -446,5 +456,6 @@
     </div>
 </div>
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 </body>
 </html>
