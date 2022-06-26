@@ -16,6 +16,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -78,33 +84,18 @@ ul {
 .section--none {
   display: none;
 }
-@media screen and (min-width: 480px) {
-  .section {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .section {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section {
-    width: 1200px;
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
 
 .section__title {
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .section__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
@@ -620,6 +611,7 @@ ul {
 .modal {
   position: relative;
   padding: 40px;
+  max-width: 450px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -754,6 +746,7 @@ ul {
   display: flex;
   margin-bottom: 30px;
   font-size: 12px;
+  line-height: 1.17;
 }
 
 .data-form__new-check {
@@ -904,6 +897,7 @@ ul {
 .nav {
   display: flex;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .nav {
@@ -954,16 +948,19 @@ ul {
 @media screen and (max-width: 767px) {
   .menu-conteiner {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
     background-color: #fff;
     padding: 48px 40px;
     z-index: 3;
   }
   .menu-conteiner.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
@@ -980,14 +977,10 @@ ul {
   }
 }
 
-.menu-conteiner.is-open .logo-none {
-  display: none;
-}
-
 @media screen and (max-width: 767px) {
   .nav__list {
     align-items: center;
-    margin-bottom: 305px;
+    flex-grow: 1;
   }
   .nav__list .nav__item:not(:last-child) {
     margin-bottom: 32px;
@@ -1015,13 +1008,13 @@ ul {
   font-weight: 500;
   position: relative;
   letter-spacing: 0.02em;
+  color: var(--primiry-text-color);
 }
 @media screen and (max-width: 767px) {
   .nav__link {
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: var(--primiry-text-color);
   }
 }
 @media screen and (min-width: 768px) {
