@@ -34,6 +34,11 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
 
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+
 }
 
 .data-form__box {

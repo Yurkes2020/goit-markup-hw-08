@@ -707,6 +707,9 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
+.data-form__label:focus, .data-form__label:hover {
+  color: var(--accent-color);
+}
 
 .data-form__box {
   position: relative;
